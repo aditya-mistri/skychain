@@ -4,7 +4,7 @@ A comprehensive blockchain-powered aircraft maintenance tracking system backend 
 
 
 
-## 🚀 Features
+## Features
 
 - **Aircraft Management**: Complete CRUD operations for aircraft registry
 - **Parts Tracking**: Blockchain-verified parts authenticity and lifecycle management
@@ -15,7 +15,7 @@ A comprehensive blockchain-powered aircraft maintenance tracking system backend 
 - **QR Code Generation**: Automated QR code creation for assets
 - **Digital Signatures**: Cryptographic verification of maintenance work
 
-## 🛠️ Technology Stack
+##Technology Stack
 
 - **Runtime**: Node.js
 - **Framework**: Express.js
@@ -26,7 +26,7 @@ A comprehensive blockchain-powered aircraft maintenance tracking system backend 
 - **QR Codes**: qrcode library
 - **Cryptography**: Node.js crypto module
 
-## 🔧 Installation
+##Installation
 
 1. **Clone the repository**
    \`\`\`bash
@@ -68,7 +68,7 @@ A comprehensive blockchain-powered aircraft maintenance tracking system backend 
    npm start
    \`\`\`
 
-## 📚 API Documentation
+##API Documentation
 
 ### Base URL
 \`\`\`
@@ -139,7 +139,7 @@ Authorization: Bearer <your-jwt-token>
 - `GET /analytics/blockchain-metrics` - Get blockchain metrics
 - `GET /analytics/roi-calculator` - Calculate ROI
 
-## 🗃️ Database Schema
+## Database Schema
 
 ### Aircraft
 \`\`\`javascript
@@ -221,7 +221,7 @@ Authorization: Bearer <your-jwt-token>
 }
 \`\`\`
 
-## 🔐 Security Features
+##Security Features
 
 - **JWT Authentication**: Secure token-based authentication
 - **Password Hashing**: bcrypt for password security
@@ -231,7 +231,7 @@ Authorization: Bearer <your-jwt-token>
 - **Helmet Security**: Security headers
 - **Data Sanitization**: Input sanitization
 
-## 🧪 Testing
+##Testing
 
 \`\`\`bash
 # Run tests
@@ -241,7 +241,7 @@ npm test
 npm run test:coverage
 \`\`\`
 
-## 📊 Monitoring & Logging
+##Monitoring & Logging
 
 The API includes comprehensive logging and monitoring:
 
@@ -251,7 +251,7 @@ The API includes comprehensive logging and monitoring:
 - Blockchain transaction monitoring
 - Database query optimization
 
-## 🚀 Deployment
+## Deployment
 
 ### Docker Deployment
 \`\`\`bash
@@ -270,31 +270,4 @@ docker run -p 5000:5000 --env-file .env skychain-backend
 - Set up monitoring (Prometheus/Grafana)
 - Configure log aggregation
 
-## 🤝 Contributing
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests
-5. Submit a pull request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 🆘 Support
-
-For support and questions:
-- Create an issue on GitHub
-- Email: support@skychain.com
-- Documentation: [API Docs](https://docs.skychain.com)
-
-## 🔄 Changelog
-
-### v1.0.0
-- Initial release
-- Complete CRUD operations for all entities
-- Blockchain integration
-- QR code generation
-- Digital signatures
-- Analytics and reporting
