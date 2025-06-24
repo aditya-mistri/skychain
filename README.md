@@ -1,8 +1,10 @@
 # SkyChain
 
-A comprehensive blockchain-powered aircraft maintenance tracking system backend built with Node.js, Express, MongoDB, and Web3 integration.
+**A comprehensive blockchain-powered aircraft maintenance tracking system backend built with Node.js, Express, MongoDB, and Web3 integration.**
 
-Screenshot of ui part (Under development) 
+---------------------------------------------------------------------------------------
+
+**Screenshot of UI part (Under development)**
 
 ![image](https://github.com/user-attachments/assets/26a63d96-6734-4628-a41b-9e041024e33d)
 
@@ -20,7 +22,7 @@ Screenshot of ui part (Under development)
 - **QR Code Generation**: Automated QR code creation for assets
 - **Digital Signatures**: Cryptographic verification of maintenance work
 
-##Technology Stack
+## Technology Stack
 
 - **Runtime**: Node.js
 - **Framework**: Express.js
@@ -33,58 +35,59 @@ Screenshot of ui part (Under development)
 
 ##Installation
 
-1. **Clone the repository**
-   \`\`\`bash
+**Clone the repository**
+   ```
    git clone <repository-url>
    cd skychain-backend
-   \`\`\`
+   ```
 
-2. **Install dependencies**
-   \`\`\`bash
+**Install dependencies**
+  ```
    npm install
-   \`\`\`
+   ```
 
-3. **Set up environment variables**
-   \`\`\`bash
+**Set up environment variables**
+  ```
    cp .env.example .env
    # Edit .env with your configuration
-   \`\`\`
+  ```
 
-4. **Start MongoDB**
-   \`\`\`bash
+**Start MongoDB**
+   ```
    # Using MongoDB service
    sudo systemctl start mongod
    
    # Or using Docker
    docker run -d -p 27017:27017 --name mongodb mongo:latest
-   \`\`\`
+  ```
 
-5. **Seed the database**
-   \`\`\`bash
+**Seed the database**
+  ```
    npm run seed
-   \`\`\`
+  ```
 
-6. **Start the server**
-   \`\`\`bash
+**Start the server**
+  ```
    # Development mode
    npm run dev
    
    # Production mode
    npm start
-   \`\`\`
+   ```
+   
 
-##API Documentation
+## API Documentation
 
 ### Base URL
-\`\`\`
+```
 http://localhost:5000/api
-\`\`\`
+```
 
 ### Authentication
 Most endpoints require JWT authentication. Include the token in the Authorization header:
-\`\`\`
+```
 Authorization: Bearer <your-jwt-token>
-\`\`\`
+```
 
 ### Endpoints
 
@@ -147,7 +150,7 @@ Authorization: Bearer <your-jwt-token>
 ## Database Schema
 
 ### Aircraft
-\`\`\`javascript
+```
 {
   registration: String,      // Unique aircraft registration
   model: String,            // Aircraft model
@@ -163,10 +166,10 @@ Authorization: Bearer <your-jwt-token>
   parts: [ObjectId],       // Referenced parts
   maintenanceHistory: [ObjectId] // Referenced maintenance records
 }
-\`\`\`
+```
 
 ### Part
-\`\`\`javascript
+```
 {
   partNumber: String,       // Part number
   name: String,            // Part name
@@ -182,10 +185,10 @@ Authorization: Bearer <your-jwt-token>
   lifecycle: Object,      // Lifecycle tracking
   authenticity: Object    // Authenticity verification
 }
-\`\`\`
+```
 
 ### Maintenance
-\`\`\`javascript
+```
 {
   workOrder: String,       // Unique work order number
   aircraft: ObjectId,      // Referenced aircraft
@@ -204,10 +207,10 @@ Authorization: Bearer <your-jwt-token>
   blockchainRecord: Object, // Blockchain transaction
   digitalSignature: Object  // Digital signature
 }
-\`\`\`
+```
 
 ### Mechanic
-\`\`\`javascript
+```
 {
   employeeId: String,      // Unique employee ID
   name: String,           // Full name
@@ -224,7 +227,7 @@ Authorization: Bearer <your-jwt-token>
   walletAddress: String,  // Blockchain wallet address
   availability: Object    // Availability schedule
 }
-\`\`\`
+```
 
 ##Security Features
 
@@ -238,13 +241,13 @@ Authorization: Bearer <your-jwt-token>
 
 ##Testing
 
-\`\`\`bash
+```
 # Run tests
 npm test
 
 # Run tests with coverage
 npm run test:coverage
-\`\`\`
+```
 
 ##Monitoring & Logging
 
@@ -259,20 +262,13 @@ The API includes comprehensive logging and monitoring:
 ## Deployment
 
 ### Docker Deployment
-\`\`\`bash
+```
 # Build Docker image
 docker build -t skychain-backend .
 
 # Run container
 docker run -p 5000:5000 --env-file .env skychain-backend
-\`\`\`
+```
 
-### Production Considerations
-- Use PM2 for process management
-- Set up MongoDB replica set
-- Configure reverse proxy (Nginx)
-- Enable SSL/TLS certificates
-- Set up monitoring (Prometheus/Grafana)
-- Configure log aggregation
 
 
